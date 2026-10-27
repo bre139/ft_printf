@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 01:26:22 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:15:09 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:25:58 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ int	ft_putstr_ret(char *str)
 		i++;
 	return (write(1, str, i));
 }
+
+int main(void)
+{
+	ft_putstr_ret("Hello\n");
+	ft_putstr_ret("");
+	ft_putstr_ret("42\n");
+	ft_putstr_ret(NULL);
+	return 0;
+}
+
 
 /*
 DESCRIPTION:

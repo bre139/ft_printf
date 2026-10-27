@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:13:44 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:13:51 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:30:43 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 int ft_puthex_ret(unsigned int n, char format)
 {
     
+}
+
+int main(void)
+{
+	ft_puthex_ret(255, 'x');
+	ft_puthex_ret(255, 'X');
+	ft_puthex_ret(0, 'x');
+	return 0;
 }
 
 

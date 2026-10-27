@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:14:13 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:14:21 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:29:38 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 int ft_putnbr_ret(int n)
 {
     
+}
+
+int main(void)
+{
+	ft_putnbr_ret(42);
+	ft_putnbr_ret(0);
+	ft_putnbr_ret(-123);
+	ft_putnbr_ret(-2147483648);
+	return 0;
 }
 
 

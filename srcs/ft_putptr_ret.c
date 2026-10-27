@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:14:36 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:14:44 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:32:06 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@ int ft_putptr_ret(void *ptr)
     
 }
 
+int main(void)
+{
+	int	n;
+	
+	n = 42;
+	ft_putptr_ret(&n);
+	ft_putptr_ret(NULL);
+	return 0;
+}
 
 
 /*
