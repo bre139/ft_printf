@@ -6,11 +6,11 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:14:36 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:32:06 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:36:42 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int ft_putptr_ret(void *ptr)
 {

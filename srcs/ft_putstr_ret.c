@@ -6,11 +6,11 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 01:26:22 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:25:58 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 04:01:56 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putstr_ret(char *str)
 {
@@ -24,15 +24,25 @@ int	ft_putstr_ret(char *str)
 	return (write(1, str, i));
 }
 
+#include <stdio.h>
 int main(void)
 {
-	ft_putstr_ret("Hello\n");
-	ft_putstr_ret("");
-	ft_putstr_ret("42\n");
-	ft_putstr_ret(NULL);
+	int	count;
+
+	count = ft_putstr_ret("Hello");
+	printf("\nreturn: %d\n\n", count);
+
+	count = ft_putstr_ret("");
+	printf("\nreturn: %d\n\n", count);
+
+	count = ft_putstr_ret("42");
+	printf("\nreturn: %d\n\n", count);
+
+	count = ft_putstr_ret(NULL);
+	printf("\nreturn: %d\n\n", count);
+
 	return 0;
 }
-
 
 /*
 DESCRIPTION:

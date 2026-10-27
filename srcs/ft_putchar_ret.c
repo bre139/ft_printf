@@ -6,22 +6,31 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 01:31:30 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:21:13 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 03:58:45 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putchar_ret(char c)
 {
 	return (write(1, &c, 1));
 }
 
+#include <stdio.h>
 int main(void)
 {
-	ft_putchar_ret('A');
+	int	count;
+
+	count = ft_putchar_ret('A');
+	printf("\nreturn: %d\n\n", count);
+
+	count = ft_putchar_ret('0');
+	printf("\nreturn: %d\n\n", count);
+
 	ft_putchar_ret('0');
-	ft_putchar_ret('\n');
+	printf("\nreturn: %d\n\n", count);
+
 	return 0;
 }
 

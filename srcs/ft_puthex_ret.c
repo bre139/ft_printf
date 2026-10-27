@@ -6,11 +6,11 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:13:44 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:30:43 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:36:31 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 
 int ft_puthex_ret(unsigned int n, char format)

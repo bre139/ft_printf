@@ -6,11 +6,11 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:11:50 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 02:12:02 by breheg           ###   ########.fr       */
+/*   Updated: 2026/10/27 02:36:24 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int ft_format(char c, va_list args)
 {
