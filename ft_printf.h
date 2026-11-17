@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:55:50 by breheg            #+#    #+#             */
-/*   Updated: 2026/11/17 13:55:53 by breheg           ###   ########.fr       */
+/*   Updated: 2026/11/17 14:59:58 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stddef.h>
+# include <limits.h>
+# include <unistd.h>
+# include <stdio.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_format(char c, va_list *args);

@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:12:17 by breheg            #+#    #+#             */
-/*   Updated: 2026/11/17 13:55:06 by breheg           ###   ########.fr       */
+/*   Updated: 2026/11/17 15:23:55 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,12 +89,17 @@ int	ft_printf(const char *format, ...)
 // }
 
 /*
+GET FIRST OUTPUT:
 make
 cc -Wall -Wextra -Werror libftprintf.a -o test.out
 ./test.out
 
+GET SECOND OUTPUT:
 make fclean
 make
 cc -Wall -Wextra -Werror libftprintf.a -o test.out
 ./test.out
+
+RESET TO BASELINE:
+`
 */
