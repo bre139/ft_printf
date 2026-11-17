@@ -6,68 +6,39 @@
 /*   By: breheg <breheg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 02:15:30 by breheg            #+#    #+#             */
-/*   Updated: 2026/10/27 05:39:36 by breheg           ###   ########.fr       */
+/*   Updated: 2026/11/17 10:27:23 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_num_len(unsigned	int num)
-{
-	int	len;
-
-	len = 0;
-	while (num != 0)
-	{
-		len++;
-		num = num / 10;
-	}
-	return (len);
-}
-
-char	*ft_uitoa(unsigned int n)
-{
-	char	*num;
-	int		len;
-
-	len = ft_num_len(n);
-	num = (char *)malloc(sizeof(char) * (len + 1));
-	if (!num)
-		return (0);
-	num[len] = '\0';
-	while (n != 0)
-	{
-		num[len - 1] = n % 10 + 48;
-		n = n / 10;
-		len--;
-	}
-	return (num);
-}
-
 int	ft_putunsigned_ret(unsigned int n)
 {
-	int		print_length;
-	char	*num;
+	char	c;
+	int		count;
 
-	print_length = 0;
-	if (n == 0)
-		print_length += write(1, "0", 1);
-	else
+	count = 0;
+	if (n >= 10)
 	{
-		num = ft_uitoa(n);
-		print_length += ft_printstr(num);
-		free(num);
+		count = ft_putunsigned_ret(n / 10);
+		if (count == -1)
+			return (-1);
 	}
-	return (print_length);
+	c = (n % 10) + '0';
+	if (write(1, &c, 1) != 1)
+		return (-1);
+	return (count + 1);
 }
 
-int main(void)
-{
-	ft_putunsigned_ret(42);
-	ft_putunsigned_ret(0);
-	ft_putunsigned_ret(4294967295U);
-	return 0;
-}
+// int main(void)
+// {
+// 	ft_putunsigned_ret(42);
+// 	write(1, "\n", 1);
+// 	ft_putunsigned_ret(0);
+// 	write(1, "\n", 1);
+// 	ft_putunsigned_ret(4294967295U);
+// 	return 0;
+// }
 
 /*
 DESCRIPTION:
@@ -75,8 +46,4 @@ Print an unsigned decimal integer (%%u).
 
 RETURN:
 Number of characters written, or -1 on write error.
-
-TODO:
-Print each base-10 digit in order. Handle 0 and UINT_MAX.
-You can use recursion, or a small local character buffer.
 */
